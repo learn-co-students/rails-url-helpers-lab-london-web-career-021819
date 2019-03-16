@@ -1,0 +1,139 @@
+
+Route to view
+  has an index page
+
+Multiple students
+  shows them on the index page
+
+Show page
+  renders properly (FAILED - 1)
+  renders the first name in a h1 tag (FAILED - 2)
+  renders the last name in a h1 tag (FAILED - 3)
+  renders the active status if the user is inactive (FAILED - 4)
+  renders the active status if the user is active (FAILED - 5)
+
+Activate page
+  Should mark an inactive student as active (FAILED - 6)
+  Should mark an active student as inactive (FAILED - 7)
+  Should redirect to the student show page (FAILED - 8)
+
+linking from the index page to the show page
+  index page links to post page
+
+Student
+  can be created
+  has an active attribute that defaults to false
+  has a to_s instance method
+
+Failures:
+
+  1) Show page renders properly
+     Failure/Error: visit student_path(@student)
+
+     Capybara::InfiniteRedirectError:
+       redirected more than 5 times, check for infinite redirects.
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:23:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/driver.rb:45:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/session.rb:277:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+     # ./spec/features/student_spec.rb:27:in `block (2 levels) in <top (required)>'
+
+  2) Show page renders the first name in a h1 tag
+     Failure/Error: visit student_path(@student)
+
+     Capybara::InfiniteRedirectError:
+       redirected more than 5 times, check for infinite redirects.
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:23:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/driver.rb:45:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/session.rb:277:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+     # ./spec/features/student_spec.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) Show page renders the last name in a h1 tag
+     Failure/Error: visit student_path(@student)
+
+     Capybara::InfiniteRedirectError:
+       redirected more than 5 times, check for infinite redirects.
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:23:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/driver.rb:45:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/session.rb:277:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+     # ./spec/features/student_spec.rb:37:in `block (2 levels) in <top (required)>'
+
+  4) Show page renders the active status if the user is inactive
+     Failure/Error: visit student_path(@student)
+
+     Capybara::InfiniteRedirectError:
+       redirected more than 5 times, check for infinite redirects.
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:23:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/driver.rb:45:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/session.rb:277:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+     # ./spec/features/student_spec.rb:42:in `block (2 levels) in <top (required)>'
+
+  5) Show page renders the active status if the user is active
+     Failure/Error: visit student_path(@student)
+
+     Capybara::InfiniteRedirectError:
+       redirected more than 5 times, check for infinite redirects.
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:23:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/driver.rb:45:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/session.rb:277:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+     # ./spec/features/student_spec.rb:49:in `block (2 levels) in <top (required)>'
+
+  6) Activate page Should mark an inactive student as active
+     Failure/Error: visit activate_student_path(@student)
+
+     Capybara::InfiniteRedirectError:
+       redirected more than 5 times, check for infinite redirects.
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:23:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/driver.rb:45:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/session.rb:277:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+     # ./spec/features/student_spec.rb:60:in `block (2 levels) in <top (required)>'
+
+  7) Activate page Should mark an active student as inactive
+     Failure/Error: visit activate_student_path(@student)
+
+     Capybara::InfiniteRedirectError:
+       redirected more than 5 times, check for infinite redirects.
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:23:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/driver.rb:45:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/session.rb:277:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+     # ./spec/features/student_spec.rb:68:in `block (2 levels) in <top (required)>'
+
+  8) Activate page Should redirect to the student show page
+     Failure/Error: visit activate_student_path(@student)
+
+     Capybara::InfiniteRedirectError:
+       redirected more than 5 times, check for infinite redirects.
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:56:in `process_and_follow_redirects'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/browser.rb:23:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/rack_test/driver.rb:45:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/session.rb:277:in `visit'
+     # /Users/kai/.rvm/gems/ruby-2.3.3/gems/capybara-3.14.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+     # ./spec/features/student_spec.rb:74:in `block (2 levels) in <top (required)>'
+
+Finished in 0.37089 seconds (files took 1.64 seconds to load)
+14 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/features/student_spec.rb:26 # Show page renders properly
+rspec ./spec/features/student_spec.rb:31 # Show page renders the first name in a h1 tag
+rspec ./spec/features/student_spec.rb:36 # Show page renders the last name in a h1 tag
+rspec ./spec/features/student_spec.rb:41 # Show page renders the active status if the user is inactive
+rspec ./spec/features/student_spec.rb:46 # Show page renders the active status if the user is active
+rspec ./spec/features/student_spec.rb:59 # Activate page Should mark an inactive student as active
+rspec ./spec/features/student_spec.rb:65 # Activate page Should mark an active student as inactive
+rspec ./spec/features/student_spec.rb:73 # Activate page Should redirect to the student show page
+
