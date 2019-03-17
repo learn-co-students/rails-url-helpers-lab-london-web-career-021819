@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   resources :students
 
-  get 'students/:id/activate', to: 'students#show'
-  # currently routes to show
+  # when user goes to the URL /students/:id/activate, 
+  get 'students/:id/activate', to: 'students#activate', as: 'activate_student'
+  
 
 end

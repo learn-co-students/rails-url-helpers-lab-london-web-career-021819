@@ -1,16 +1,16 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
-
-
   
   def index
     @students = Student.all
   end
 
-  def activate_student_path
-    @student.toggle(:active)
+
+  def activate
+    @student = Student.find(params[:id])
+    @student.toggle!(:active)
+    redirect_to student_path
   end
-  # needs a separate view??
 
   private
 
