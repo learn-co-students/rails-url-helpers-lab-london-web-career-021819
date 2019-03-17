@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :students
 
-  # when user goes to the URL /students/:id/activate, 
+
   get 'students/:id/activate', to: 'students#activate', as: 'activate_student'
   
 
