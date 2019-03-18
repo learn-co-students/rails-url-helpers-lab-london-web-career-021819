@@ -5,12 +5,17 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
-  def show
+
+  def activate
+    @student = Student.find(params[:id])
+    @student.toggle!(:active)
+    redirect_to student_path
   end
 
   private
 
-    def set_student
-      @student = Student.find(params[:id])
-    end
+    # @student used in show page (individual student)
+  def set_student
+    @student = Student.find(params[:id])
+  end
 end
