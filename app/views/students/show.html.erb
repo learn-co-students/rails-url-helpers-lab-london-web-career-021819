@@ -1,1 +1,10 @@
 <h1><%= @student.to_s %></h1>
+<br><br>
+<form action="<%= student_active_path(@student) %>" method="get">
+  <% if @student.active == false %>
+      <p style="color:red">This student is currently inactive.</p>
+  <% else %>
+      <p>This student is currently active.</p>
+  <% end %>
+  <input type="submit" name="Submit" value="<%= @student.active ? "de-activae" : "activate"  %>">
+</form>
